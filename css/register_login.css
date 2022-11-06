@@ -1,0 +1,69 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+li {
+    list-style: none;
+}
+
+#tabpage {
+    width: 400px;
+    height: 250px;
+    margin: 100px auto;
+}
+
+.tablink {
+    float: left;
+    width: 50%;
+    font-size: 17px;
+    background-color: #555;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+.tabcontent {
+    display: none;
+    height: 180px;
+    padding: 6px 12px;
+    border: 1px solid black;
+    border-top: none;
+}
+
+#register li {
+    margin-bottom: 10px;
+}
+
+#register li label {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+}
+
+#register li .btn {
+    margin: 0 0 0 165px;
+}
+
+#login li {
+    margin-bottom: 20px;
+}
+
+#login li label {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+}
+
+#login li .btn {
+    margin: 0 0 0 165px;
+}
+
+

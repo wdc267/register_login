@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录注册页面</title>
+    <link rel="stylesheet" href="css/register_login.css">
+</head>
+<body>
+    <div id="tabpage">
+        <div>
+            <button class="tablink" style="background-color: #ccc;">注册</button>
+            <button class="tablink">登录</button>
+        </div>
+        <div id="register" class="tabcontent" style="display:block">
+                <li><label for="">用户名：</label><input type="text"></li>
+                <li><label for="">id：</label><input type="text"></li>
+                <li><label for="">密码：</label><input type="text"></li>
+                <li><button class="btn">注册</button></li>
+        </div>
+        <div id="login" class="tabcontent">
+            <li><label for="">id：</label><input type="text"></li>
+            <li><label for="">密码：</label><input type="text"></li>
+            <li><button class="btn">登录</button></li>
+        </div>
+    </div>
+    <script src="js/register_login.js"></script>
+</body>
+</html>
