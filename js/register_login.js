@@ -42,14 +42,19 @@ registerBtn.addEventListener('click', () => {
         id: id, name: name, password: pwd,   // 初始化一个空的待办清单
     });
     fetch(`${host}/${key}`, requestOptions) // 这里的网址没有id
-        .then(response => response.json())
+        .then(response => {
+            if (response.status == 500) {
+                alert('用户id重复，注册失败')
+            }
+            else return response.json()
+        }
+        )
         .then(data => {
             console.log(data.id + "注册成功")
             alert('注册成功')
         })  //新创建后的数据的id
         .catch(err => {
             console.log(err)
-            alert('用户已存在，注册失败')
         })
 })
 // 登录
