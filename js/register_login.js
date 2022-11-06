@@ -67,7 +67,7 @@ loginBtn.addEventListener('click', () => {
             if (data.id === id) {
                 if (data.password === password) {
                     console.log(data.name + '登录成功')
-                    window.location.href = encodeURI('./index.html?uname=' + data.name);
+                    window.location.href = encodeURI('./homepage.html?uname=' + data.name);
                 } else {
                     throw new Error("密码不正确")
                 }
