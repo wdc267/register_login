@@ -1,6 +1,7 @@
 let tablinks = document.querySelectorAll('.tablink');
 let tabcontents = document.querySelectorAll('.tabcontent');
-for (var i = 0; i < tablinks.length; i++) {
+// tab切换效果
+for (let i = 0; i < tablinks.length; i++) {
     tablinks[i].setAttribute('index', i);
     tablinks[i].onclick = function () {
         for (let i = 0; i < tablinks.length; i++) {
@@ -20,13 +21,12 @@ let loginCode = document.querySelector('#login').querySelectorAll('input')[1];
 let loginBtn = document.querySelector('#login').querySelectorAll('.btn')[0];
 const myHeaders = new Headers()
 myHeaders.append("Content-Type", "application/json")
-//登录
 // 获取注册时所需的用户名
 let resName = document.querySelector('#register').querySelectorAll('input')[0];
 let resId = document.querySelector('#register').querySelectorAll('input')[1];
 let resCode = document.querySelector('#register').querySelectorAll('input')[2];
 let registerBtn = document.querySelector('#register').querySelectorAll('.btn')[0];
-//注册
+// 注册
 registerBtn.addEventListener('click', () => {
     let host = 'https://db-api.amarea.cn'
     let key = 'users'
@@ -45,12 +45,14 @@ registerBtn.addEventListener('click', () => {
         .then(response => response.json())
         .then(data => {
             console.log(data.id + "注册成功")
+            alert('注册成功')
         })  //新创建后的数据的id
         .catch(err => {
             console.log(err)
             alert('用户已存在，注册失败')
         })
 })
+// 登录
 loginBtn.addEventListener('click', () => {
     let requestOptions = { // 里面不能有body
         method: "GET",
